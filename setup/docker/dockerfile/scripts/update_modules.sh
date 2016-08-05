@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $GOPATH/src/github.com/future-architect/vuls
+cd $GOPATH/src/github.com/sadayuki-matsuno/vuls-test
 git pull origin master
 glide install
 go install

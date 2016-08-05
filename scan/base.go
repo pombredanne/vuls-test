@@ -23,9 +23,9 @@ import (
 	"strings"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/future-architect/vuls/config"
-	"github.com/future-architect/vuls/cveapi"
-	"github.com/future-architect/vuls/models"
+	"github.com/sadayuki-matsuno/vuls-test/config"
+	"github.com/sadayuki-matsuno/vuls-test/cveapi"
+	"github.com/sadayuki-matsuno/vuls-test/models"
 )
 
 type base struct {

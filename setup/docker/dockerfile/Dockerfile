@@ -59,15 +59,15 @@ ENV VULS_ROOT /opt/vuls
 RUN mkdir -p /var/log/vuls ${VULS_ROOT}/conf /root/.ssh/
 RUN chmod 700 -R /var/log/vuls $VULS_ROOT
 #  RUN go get github.com/kotakanbe/go-cve-dictionary
-#  RUN go get github.com/future-architect/vuls
+#  RUN go get github.com/sadayuki-matsuno/vuls-test
 
 RUN go get -v -d github.com/kotakanbe/go-cve-dictionary \
     && cd $GOPATH/src/github.com/kotakanbe/go-cve-dictionary \
     && glide install \
     && go install
 
-RUN go get -v -d github.com/future-architect/vuls \
-    && cd $GOPATH/src/github.com/future-architect/vuls \
+RUN go get -v -d github.com/sadayuki-matsuno/vuls-test \
+    && cd $GOPATH/src/github.com/sadayuki-matsuno/vuls-test \
     && glide install \
     && go install
 

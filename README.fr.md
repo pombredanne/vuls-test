@@ -7,8 +7,8 @@ Scanneur de vulnérabilité Linux, sans agent, écrit en golang
 
 Nous avons une équipe Slack. [Rejoignez notre Slack Team](http://goo.gl/forms/xm5KFo35tu)  
 
-[README en English](https://github.com/future-architect/vuls/blob/master/README.md)  
-[README en Japonais](https://github.com/future-architect/vuls/blob/master/README.ja.md)  
+[README en English](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.md)  
+[README en Japonais](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.ja.md)  
 
 [![asciicast](https://asciinema.org/a/3y9zrf950agiko7klg8abvyck.png)](https://asciinema.org/a/3y9zrf950agiko7klg8abvyck)
 
@@ -151,7 +151,7 @@ Ouvrez un second terminal, connectez vous à l'instance ec2 via SSH
 
 go get
 ```
-$ go get github.com/future-architect/vuls
+$ go get github.com/sadayuki-matsuno/vuls-test
 ```
 
 ## Step6. Configuration
@@ -221,4 +221,4 @@ $ vuls tui
 
 ----
 
-For more information see [README in English](https://github.com/future-architect/vuls/blob/master/README.md)  
+For more information see [README in English](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.md)  

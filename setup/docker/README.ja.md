@@ -23,7 +23,7 @@
 	```
 	mkdir work
 	cd work
-	git clone https://github.com/future-architect/vuls.git
+	git clone https://github.com/sadayuki-matsuno/vuls-test.git
 	cd vuls/setup/docker
 	```
 

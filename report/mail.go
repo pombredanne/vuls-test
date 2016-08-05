@@ -24,8 +24,8 @@ import (
 	"net/smtp"
 	"strings"
 
-	"github.com/future-architect/vuls/config"
-	"github.com/future-architect/vuls/models"
+	"github.com/sadayuki-matsuno/vuls-test/config"
+	"github.com/sadayuki-matsuno/vuls-test/models"
 	//	"gopkg.in/gomail.v2"
 )
 

@@ -22,7 +22,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/future-architect/vuls/config"
+	"github.com/sadayuki-matsuno/vuls-test/config"
 	"github.com/jinzhu/gorm"
 	cve "github.com/kotakanbe/go-cve-dictionary/models"
 )

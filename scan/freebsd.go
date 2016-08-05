@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/future-architect/vuls/config"
-	"github.com/future-architect/vuls/cveapi"
-	"github.com/future-architect/vuls/models"
-	"github.com/future-architect/vuls/util"
+	"github.com/sadayuki-matsuno/vuls-test/config"
+	"github.com/sadayuki-matsuno/vuls-test/cveapi"
+	"github.com/sadayuki-matsuno/vuls-test/models"
+	"github.com/sadayuki-matsuno/vuls-test/util"
 )
 
 // inherit OsTypeInterface

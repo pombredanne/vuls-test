@@ -20,7 +20,7 @@ package report
 import (
 	"fmt"
 
-	"github.com/future-architect/vuls/models"
+	"github.com/sadayuki-matsuno/vuls-test/models"
 )
 
 // StdoutWriter write to stdout

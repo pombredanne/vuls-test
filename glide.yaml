@@ -1,4 +1,4 @@
-package: github.com/future-architect/vuls
+package: github.com/sadayuki-matsuno/vuls-test
 import:
 - package: github.com/Azure/azure-sdk-for-go
   subpackages:

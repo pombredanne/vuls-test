@@ -2,7 +2,7 @@
 # Vuls: VULnerability Scanner
 
 [![Slack](https://img.shields.io/badge/slack-join-blue.svg)](http://goo.gl/forms/xm5KFo35tu)
-[![License](https://img.shields.io/github/license/future-architect/vuls.svg?style=flat-square)](https://github.com/future-architect/vuls/blob/master/LICENSE.txt)
+[![License](https://img.shields.io/github/license/sadayuki-matsuno/vuls-test.svg?style=flat-square)](https://github.com/sadayuki-matsuno/vuls-test/blob/master/LICENSE.txt)
 
 
 ![Vuls-logo](img/vuls_logo.png)  
@@ -11,8 +11,8 @@ Vulnerability scanner for Linux/FreeBSD, agentless, written in golang.
 
 We have a slack team. [Join slack team](http://goo.gl/forms/xm5KFo35tu)  
 
-[README in Japanese](https://github.com/future-architect/vuls/blob/master/README.ja.md)  
-[README in French](https://github.com/future-architect/vuls/blob/master/README.fr.md)  
+[README in Japanese](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.ja.md)  
+[README in French](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.fr.md)  
 
 [![asciicast](https://asciinema.org/a/3y9zrf950agiko7klg8abvyck.png)](https://asciinema.org/a/3y9zrf950agiko7klg8abvyck)
 
@@ -72,7 +72,7 @@ There are 3 ways to setup Vuls.
 - Docker container  
 Dockernized-Vuls with vulsrepo UI in it.  
 You can run install and run Vuls on your machine with only a few commands.  
-see https://github.com/future-architect/vuls/tree/master/setup/docker
+see https://github.com/sadayuki-matsuno/vuls-test/tree/master/setup/docker
 
 - Chef  
 see https://github.com/sadayuki-matsuno/vuls-cookbook
@@ -163,7 +163,7 @@ $ go get github.com/kotakanbe/go-cve-dictionary
 
 If an error occurred while go get, check the following points.
 - Update Git
-- try [deploying with glide](https://github.com/future-architect/vuls/blob/master/README.md#deploy-with-glide).
+- try [deploying with glide](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.md#deploy-with-glide).
 
 Fetch vulnerability data from NVD.  
 It takes about 10 minutes (on AWS).  
@@ -181,12 +181,12 @@ Launch a new terminal and SSH to the ec2 instance.
 
 go get
 ```
-$ go get github.com/future-architect/vuls
+$ go get github.com/sadayuki-matsuno/vuls-test
 ```
 
 If an error occurred while go get, check the following points.
 - Update Git
-- try [deploying with glide](https://github.com/future-architect/vuls/blob/master/README.md#deploy-with-glide).
+- try [deploying with glide](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.md#deploy-with-glide).
 
 ## Step6. Config
 
@@ -211,7 +211,7 @@ $ vuls configtest
 ```
 $ vuls prepare
 ```
-see [Usage: Prepare](https://github.com/future-architect/vuls#usage-prepare)
+see [Usage: Prepare](https://github.com/sadayuki-matsuno/vuls-test#usage-prepare)
 
 ## Step8. Start Scanning
 
@@ -265,7 +265,7 @@ $ vuls tui
 
 # Setup Vuls in a Docker Container
 
-see https://github.com/future-architect/vuls/tree/master/setup/docker
+see https://github.com/sadayuki-matsuno/vuls-test/tree/master/setup/docker
 
 ----
 
@@ -498,11 +498,11 @@ You can customize your configuration using this template.
     - port: SSH Port number
     - user: SSH username
     - keyPath: SSH private key path
-    - cpeNames: see [Usage: Scan vulnerability of non-OS package](https://github.com/future-architect/vuls#usage-scan-vulnerability-of-non-os-package)
-    - containers: see [Usage: Scan Docker containers](https://github.com/future-architect/vuls#usage-scan-docker-containers)
+    - cpeNames: see [Usage: Scan vulnerability of non-OS package](https://github.com/sadayuki-matsuno/vuls-test#usage-scan-vulnerability-of-non-os-package)
+    - containers: see [Usage: Scan Docker containers](https://github.com/sadayuki-matsuno/vuls-test#usage-scan-docker-containers)
     - optional: Add additional information to JSON report.
 
-    Vuls supports two types of SSH. One is native go implementation. The other is external SSH command. For details, see [-ssh-external option](https://github.com/future-architect/vuls#-ssh-external-option)
+    Vuls supports two types of SSH. One is native go implementation. The other is external SSH command. For details, see [-ssh-external option](https://github.com/sadayuki-matsuno/vuls-test#-ssh-external-option)
     
     Multiple SSH authentication methods are supported.  
     - SSH agent
@@ -528,7 +528,7 @@ configtest:
   -ask-key-password
         Ask ssh privatekey password before scanning
   -config string
-        /path/to/toml (default "/Users/kotakanbe/go/src/github.com/future-architect/vuls/config.toml")
+        /path/to/toml (default "/Users/kotakanbe/go/src/github.com/sadayuki-matsuno/vuls-test/config.toml")
   -debug
         debug mode
   -ssh-external
@@ -851,7 +851,7 @@ It is common that keep Docker containers runnning without SSHd daemon.
 see [Docker Blog:Why you don't need to run SSHd in your Docker containers](https://blog.docker.com/2014/06/why-you-dont-need-to-run-sshd-in-docker/)
 
 Vuls scans Docker containers via `docker exec` instead of SSH.  
-For more details, see [Architecture section](https://github.com/future-architect/vuls#architecture)
+For more details, see [Architecture section](https://github.com/sadayuki-matsuno/vuls-test#architecture)
 
 - To scan all of running containers  
   `"${running}"` needs to be set in the containers item.
@@ -905,7 +905,7 @@ Key binding is bellow.
 | Ctrl+j, Ctrl+k | move cursor to up/donw |
 | Ctrl+u, Ctrl+d | page up/donw |
 
-For details, see https://github.com/future-architect/vuls/blob/master/report/tui.go
+For details, see https://github.com/sadayuki-matsuno/vuls-test/blob/master/report/tui.go
 
 ## Display the previous scan results
 
@@ -995,8 +995,8 @@ $ go install
 ```
 - Deploy vuls
 ```
-$ go get -d github.com/future-architect/vuls
-$ cd $GOPATH/src/github.com/future-architect/vuls
+$ go get -d github.com/sadayuki-matsuno/vuls-test
+$ cd $GOPATH/src/github.com/sadayuki-matsuno/vuls-test
 $ glide install
 $ go install
 ```
@@ -1016,7 +1016,7 @@ $ go install
 
 - Update vuls
 ```
-$ cd $GOPATH/src/github.com/future-architect/vuls
+$ cd $GOPATH/src/github.com/sadayuki-matsuno/vuls-test
 $ git pull
 $ glide install
 $ go install
@@ -1090,14 +1090,14 @@ Youtube
 
 # Authors
 
-kotakanbe ([@kotakanbe](https://twitter.com/kotakanbe)) created vuls and [these fine people](https://github.com/future-architect/vuls/graphs/contributors) have contributed.
+kotakanbe ([@kotakanbe](https://twitter.com/kotakanbe)) created vuls and [these fine people](https://github.com/sadayuki-matsuno/vuls-test/graphs/contributors) have contributed.
 
 ----
 
 # Contribute
 
-1. fork a repository: github.com/future-architect/vuls to github.com/you/repo
-2. get original code: go get github.com/future-architect/vuls
+1. fork a repository: github.com/sadayuki-matsuno/vuls-test to github.com/you/repo
+2. get original code: go get github.com/sadayuki-matsuno/vuls-test
 3. work on original code
 4. add remote to your repo: git remote add myfork https://github.com/you/repo.git
 5. push your changes: git push myfork
@@ -1109,11 +1109,11 @@ kotakanbe ([@kotakanbe](https://twitter.com/kotakanbe)) created vuls and [these 
 
 # Change Log
 
-Please see [CHANGELOG](https://github.com/future-architect/vuls/blob/master/CHANGELOG.md).
+Please see [CHANGELOG](https://github.com/sadayuki-matsuno/vuls-test/blob/master/CHANGELOG.md).
 
 ----
 
 # Licence
 
-Please see [LICENSE](https://github.com/future-architect/vuls/blob/master/LICENSE).
+Please see [LICENSE](https://github.com/sadayuki-matsuno/vuls-test/blob/master/LICENSE).
 

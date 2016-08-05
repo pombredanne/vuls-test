@@ -23,7 +23,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/future-architect/vuls/models"
+	"github.com/sadayuki-matsuno/vuls-test/models"
 )
 
 // TextFileWriter writes results to file.

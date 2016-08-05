@@ -25,8 +25,8 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/cenkalti/backoff"
-	"github.com/future-architect/vuls/config"
-	"github.com/future-architect/vuls/models"
+	"github.com/sadayuki-matsuno/vuls-test/config"
+	"github.com/sadayuki-matsuno/vuls-test/models"
 	"github.com/parnurzeal/gorequest"
 )
 

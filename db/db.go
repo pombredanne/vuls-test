@@ -23,8 +23,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/future-architect/vuls/config"
-	m "github.com/future-architect/vuls/models"
+	"github.com/sadayuki-matsuno/vuls-test/config"
+	m "github.com/sadayuki-matsuno/vuls-test/models"
 	"github.com/jinzhu/gorm"
 	cvedb "github.com/kotakanbe/go-cve-dictionary/db"
 	cve "github.com/kotakanbe/go-cve-dictionary/models"

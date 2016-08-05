@@ -24,8 +24,8 @@ import (
 
 	"golang.org/x/net/context"
 
-	"github.com/future-architect/vuls/commands"
-	"github.com/future-architect/vuls/version"
+	"github.com/sadayuki-matsuno/vuls-test/commands"
+	"github.com/sadayuki-matsuno/vuls-test/version"
 	"github.com/google/subcommands"
 
 	_ "github.com/mattn/go-sqlite3"

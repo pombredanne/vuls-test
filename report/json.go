@@ -23,7 +23,7 @@ import (
 	"io/ioutil"
 	"path/filepath"
 
-	"github.com/future-architect/vuls/models"
+	"github.com/sadayuki-matsuno/vuls-test/models"
 )
 
 // JSONWriter writes results to file.

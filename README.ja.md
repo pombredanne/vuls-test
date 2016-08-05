@@ -7,7 +7,7 @@
 
 Vulnerability scanner for Linux/FreeBSD, agentless, written in golang.
 
-[README in English](https://github.com/future-architect/vuls/blob/master/README.md)  
+[README in English](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.md)  
 Slackチームは[こちらから](http://goo.gl/forms/xm5KFo35tu)参加できます。(日本語でオッケーです)
 
 [![asciicast](https://asciinema.org/a/bazozlxrw1wtxfu9yojyihick.png)](https://asciinema.org/a/bazozlxrw1wtxfu9yojyihick)
@@ -65,8 +65,8 @@ Vulsのセットアップは以下の３パターンがある
 
 -  Dockerコンテナ上にセットアップ  
 Docker Composeを用いて少ないコマンドでセットアップ可能  
-see https://github.com/future-architect/vuls/tree/master/setup/docker  
-[日本語README](https://github.com/future-architect/vuls/blob/master/setup/docker/README.ja.md)  
+see https://github.com/sadayuki-matsuno/vuls-test/tree/master/setup/docker  
+[日本語README](https://github.com/sadayuki-matsuno/vuls-test/blob/master/setup/docker/README.ja.md)  
 - Chefでセットアップ  
 see https://github.com/sadayuki-matsuno/vuls-cookbook
 - 手動でセットアップ  
@@ -163,7 +163,7 @@ $ go get -u github.com/kotakanbe/go-cve-dictionary
 
 go getでエラーが発生した場合は、以下の点を確認する。
 - Gitのバージョンがv2以降か？
-- Go依存パッケージの問題でgo getに失敗する場合は [deploying with glide](https://github.com/future-architect/vuls/blob/master/README.md#deploy-with-glide) を試す。
+- Go依存パッケージの問題でgo getに失敗する場合は [deploying with glide](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.md#deploy-with-glide) を試す。
 
 NVDから脆弱性データベースを取得する。  
 環境によって異なるが、AWS上では10分程度かかる。
@@ -181,20 +181,20 @@ $ ls -alh cve.sqlite3
 
 go get
 ```
-$ go get github.com/future-architect/vuls
+$ go get github.com/sadayuki-matsuno/vuls-test
 ```
 
 vulsを既にインストール済みでupdateしたい場合は
 
 ```bash
-$ go get -u github.com/future-architect/vuls
+$ go get -u github.com/sadayuki-matsuno/vuls-test
 ```
 
 で可能である。
 
 go getでエラーが発生した場合は、以下の点を確認する。
 - Gitのバージョンがv2以降か？
-- Go依存パッケージの問題でgo getに失敗する場合は [deploying with glide](https://github.com/future-architect/vuls/blob/master/README.md#deploy-with-glide) を試す。
+- Go依存パッケージの問題でgo getに失敗する場合は [deploying with glide](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.md#deploy-with-glide) を試す。
 
 ## Step6. Config
 
@@ -219,7 +219,7 @@ $ vuls configtest
 ```
 $ vuls prepare
 ```
-詳細は [Usage: Prepare](https://github.com/future-architect/vuls#usage-prepare) を参照
+詳細は [Usage: Prepare](https://github.com/sadayuki-matsuno/vuls-test#usage-prepare) を参照
 
 ## Step8. Start Scanning
 
@@ -495,13 +495,13 @@ host         = "172.31.4.82"
     - port: SSH Port number
     - user: SSH username
     - keyPath: SSH private key path
-    - cpeNames: see [Usage: Scan vulnerability of non-OS package](https://github.com/future-architect/vuls/blob/master/README.ja.md#usage-scan-vulnerability-of-non-os-package)
-    - containers: see [Usage: Scan Docker containers](https://github.com/future-architect/vuls/blob/master/README.ja.md#usage-scan-docker-containers)
+    - cpeNames: see [Usage: Scan vulnerability of non-OS package](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.ja.md#usage-scan-vulnerability-of-non-os-package)
+    - containers: see [Usage: Scan Docker containers](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.ja.md#usage-scan-docker-containers)
     - optional: JSONレポートに含めたい追加情報
 
 
     Vulsは各サーバにSSHで接続するが、Goのネイティブ実装と、OSコマンドの２種類のSSH接続方法をサポートしている。
-    詳細は [-ssh-external option](https://github.com/future-architect/vuls/blob/master/README.ja.md#-ssh-external-option) を参照。
+    詳細は [-ssh-external option](https://github.com/sadayuki-matsuno/vuls-test/blob/master/README.ja.md#-ssh-external-option) を参照。
     
     また、以下のSSH認証をサポートしている。
     - SSH agent
@@ -527,7 +527,7 @@ configtest:
   -ask-key-password
         Ask ssh privatekey password before scanning
   -config string
-        /path/to/toml (default "/Users/kotakanbe/go/src/github.com/future-architect/vuls/config.toml")
+        /path/to/toml (default "/Users/kotakanbe/go/src/github.com/sadayuki-matsuno/vuls-test/config.toml")
   -debug
         debug mode
   -ssh-external
@@ -858,7 +858,7 @@ DockerコンテナはSSHデーモンを起動しないで運用するケース�
  [Docker Blog:Why you don't need to run SSHd in your Docker containers](https://blog.docker.com/2014/06/why-you-dont-need-to-run-sshd-in-docker/)
 
 Vulsは、DockerホストにSSHで接続し、`docker exec`でDockerコンテナにコマンドを発行して脆弱性をスキャンする。
-詳細は、[Architecture section](https://github.com/future-architect/vuls#architecture)を参照
+詳細は、[Architecture section](https://github.com/sadayuki-matsuno/vuls-test#architecture)を参照
 
 - 全ての起動中のDockerコンテナをスキャン  
   `"${running}"` をcontainersに指定する
@@ -911,7 +911,7 @@ Key binding is bellow.
 | Ctrl+j, Ctrl+k | move cursor to up/donw |
 | Ctrl+u, Ctrl+d | page up/donw |
 
-For details, see https://github.com/future-architect/vuls/blob/master/report/tui.go
+For details, see https://github.com/sadayuki-matsuno/vuls-test/blob/master/report/tui.go
 
 ## Display the previous scan results
 
@@ -1076,8 +1076,8 @@ $ go install
 ```
 - Deploy vuls
 ```
-$ go get -d github.com/future-architect/vuls
-$ cd $GOPATH/src/github.com/future-architect/vuls
+$ go get -d github.com/sadayuki-matsuno/vuls-test
+$ cd $GOPATH/src/github.com/sadayuki-matsuno/vuls-test
 $ glide install
 $ go install
 ```
@@ -1097,7 +1097,7 @@ $ go install
 
 - Update vuls
 ```
-$ cd $GOPATH/src/github.com/future-architect/vuls
+$ cd $GOPATH/src/github.com/sadayuki-matsuno/vuls-test
 $ git pull
 $ glide install
 $ go install
@@ -1175,14 +1175,14 @@ Youtube
 
 # Authors
 
-kotakanbe ([@kotakanbe](https://twitter.com/kotakanbe)) created vuls and [these fine people](https://github.com/future-architect/vuls/graphs/contributors) have contributed.
+kotakanbe ([@kotakanbe](https://twitter.com/kotakanbe)) created vuls and [these fine people](https://github.com/sadayuki-matsuno/vuls-test/graphs/contributors) have contributed.
 
 ----
 
 # Contribute
 
-1. fork a repository: github.com/future-architect/vuls to github.com/you/repo
-2. get original code: go get github.com/future-architect/vuls
+1. fork a repository: github.com/sadayuki-matsuno/vuls-test to github.com/you/repo
+2. get original code: go get github.com/sadayuki-matsuno/vuls-test
 3. work on original code
 4. add remote to your repo: git remote add myfork https://github.com/you/repo.git
 5. push your changes: git push myfork
@@ -1194,11 +1194,11 @@ kotakanbe ([@kotakanbe](https://twitter.com/kotakanbe)) created vuls and [these 
 
 # Change Log
 
-Please see [CHANGELOG](https://github.com/future-architect/vuls/blob/master/CHANGELOG.md).
+Please see [CHANGELOG](https://github.com/sadayuki-matsuno/vuls-test/blob/master/CHANGELOG.md).
 
 ----
 
 # Licence
 
-Please see [LICENSE](https://github.com/future-architect/vuls/blob/master/LICENSE).
+Please see [LICENSE](https://github.com/sadayuki-matsuno/vuls-test/blob/master/LICENSE).
 

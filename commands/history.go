@@ -27,9 +27,9 @@ import (
 	"golang.org/x/net/context"
 
 	"github.com/Sirupsen/logrus"
-	c "github.com/future-architect/vuls/config"
-	"github.com/future-architect/vuls/db"
-	"github.com/future-architect/vuls/models"
+	c "github.com/sadayuki-matsuno/vuls-test/config"
+	"github.com/sadayuki-matsuno/vuls-test/db"
+	"github.com/sadayuki-matsuno/vuls-test/models"
 	"github.com/google/subcommands"
 )
 

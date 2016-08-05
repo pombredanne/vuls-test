@@ -26,12 +26,12 @@ import (
 	"strings"
 
 	"github.com/Sirupsen/logrus"
-	c "github.com/future-architect/vuls/config"
-	"github.com/future-architect/vuls/cveapi"
-	"github.com/future-architect/vuls/db"
-	"github.com/future-architect/vuls/report"
-	"github.com/future-architect/vuls/scan"
-	"github.com/future-architect/vuls/util"
+	c "github.com/sadayuki-matsuno/vuls-test/config"
+	"github.com/sadayuki-matsuno/vuls-test/cveapi"
+	"github.com/sadayuki-matsuno/vuls-test/db"
+	"github.com/sadayuki-matsuno/vuls-test/report"
+	"github.com/sadayuki-matsuno/vuls-test/scan"
+	"github.com/sadayuki-matsuno/vuls-test/util"
 	"github.com/google/subcommands"
 	"golang.org/x/net/context"
 )

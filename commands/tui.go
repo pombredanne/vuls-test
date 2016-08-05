@@ -27,8 +27,8 @@ import (
 	"strings"
 
 	log "github.com/Sirupsen/logrus"
-	c "github.com/future-architect/vuls/config"
-	"github.com/future-architect/vuls/report"
+	c "github.com/sadayuki-matsuno/vuls-test/config"
+	"github.com/sadayuki-matsuno/vuls-test/report"
 	"github.com/google/subcommands"
 	"golang.org/x/net/context"
 )
